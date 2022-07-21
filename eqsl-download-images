@@ -126,7 +126,7 @@ foreach my $p (@cardpages) {
     open (HTTP, '-|', "curl --max-time 20 -s -k -L --cookie $cookiefile --cookie-jar $cookiefile '$p'");
     while(<HTTP>) {
       if (m|<img src="/CFFileServlet/_cf_image/([^"]+)"|) {
-	my $file = "$mycall-$date-$hiscall-$band-$mode.png";
+	my $file = "$mycall-$date-$hiscall-$band-$mode.jpg";
 	$file =~ tr/\\\//__/;
 	my $imgurl = "https://www.eqsl.cc/CFFileServlet/_cf_image/$1";
 	#print "$imgurl\n";
